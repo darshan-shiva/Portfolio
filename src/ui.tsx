@@ -210,9 +210,24 @@ export function Art({ p, small }: { p: Project; small?: boolean }) {
         <path d="M146 98l8 8 18-20" stroke="#d9c2ff" strokeWidth="3" />
       </svg>
     ),
+    meeting: (
+      <svg viewBox="0 0 200 140" fill="none" stroke={stroke} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="12" y="14" width="64" height="84" rx="4" />
+        <path d="M24 34h40M24 48h40M24 62h28M24 76h36" opacity=".7" />
+        <path d="M86 56h24" />
+        <path d="M104 48l8 8-8 8" />
+        <circle cx="142" cy="34" r="10" />
+        <path d="M137 34l4 4 8-9" stroke="#c7c9ff" strokeWidth="2.5" />
+        <circle cx="142" cy="70" r="10" />
+        <circle cx="142" cy="106" r="10" opacity=".7" />
+        <path d="M142 44v16M142 80v16" opacity=".7" />
+        <path d="M160 70h28M160 106h20" opacity=".5" />
+      </svg>
+    ),
   }[p.motif]
   return (
     <div className={`art ${small ? 'small' : ''}`} style={{ background: `linear-gradient(145deg, ${p.hue[0]}, ${p.hue[1]})` }}>
+      {p.featured && <span className="art-badge">Featured</span>}
       <span className="art-eyebrow">{p.eyebrow}</span>
       {motif}
       <h3 className="art-title">{p.title}</h3>

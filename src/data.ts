@@ -39,12 +39,35 @@ export type Project = {
   short: string
   points: string[]
   stat?: { value: string; label: string }
-  repo: string
+  /** Public source repository. Omitted when the code is private, so no dead link is shown. */
+  repo?: string
+  /** Live, deployed version of the project. */
+  demo?: string
+  featured?: boolean
   hue: [string, string]
-  motif: 'rag' | 'traffic' | 'health' | 'spam'
+  motif: 'rag' | 'traffic' | 'health' | 'spam' | 'meeting'
 }
 
 export const projects: Project[] = [
+  {
+    slug: 'decipher',
+    title: 'DECIPHER',
+    tagline: 'Meeting transcripts to decisions and commitments',
+    category: 'Agentic AI · NLP',
+    filters: ['AI / ML', 'Full-Stack'],
+    eyebrow: 'TRANSCRIPTS · DECISIONS · COMMITMENTS',
+    stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Zod', 'Google Gemini API', 'OpenRouter', 'Trello API', 'Vercel'],
+    short: 'Next.js · Gemini',
+    points: [
+      'Built an AI-powered meeting intelligence platform that turns meeting transcripts into structured decisions, commitments, risks and dependencies, each linked back to the transcript line it came from.',
+      'Designed human-in-the-loop approval workflows: AI output is validated against the transcript and reviewed by a person before anything is saved or sent to Trello.',
+      'Added cross-meeting decision intelligence with a Decision Timeline, Commitment Tracker, Impact Analysis and an AI Command Center, plus Trello integration for approved commitments.',
+    ],
+    demo: 'https://decipher-fawn.vercel.app/',
+    featured: true,
+    hue: ['#14143a', '#6366f1'],
+    motif: 'meeting',
+  },
   {
     slug: 'cost-aware-rag',
     title: 'Cost-Aware RAG',

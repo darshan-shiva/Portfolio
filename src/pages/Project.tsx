@@ -23,7 +23,7 @@ export default function ProjectPage() {
     <>
       <header className="section default-header project-hero theme-dark">
         <div className="container medium">
-          <span className="eyebrow">{p.eyebrow}</span>
+          <span className="eyebrow">{p.featured ? `FEATURED PROJECT · ${p.eyebrow}` : p.eyebrow}</span>
           <Lines lines={[p.title]} />
           <p className="reveal" style={{ opacity: 0.6, fontSize: '1.2em' }}>{p.tagline}</p>
         </div>
@@ -59,7 +59,8 @@ export default function ProjectPage() {
                 ))}
               </ul>
               <div className="proj-actions reveal">
-                <Btn variant="normal" href={p.repo} external>View on GitHub</Btn>
+                {p.demo && <Btn variant="normal" href={p.demo} external>Live Demo</Btn>}
+                {p.repo && <Btn variant="normal" href={p.repo} external>View on GitHub</Btn>}
                 <Btn variant="normal" to="/work">All work</Btn>
               </div>
             </div>
