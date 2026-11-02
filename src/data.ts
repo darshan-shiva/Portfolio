@@ -26,7 +26,7 @@ export const socialLinks: { key: SocialKey; label: string; href: string }[] = [
   { key: 'email', label: 'Email', href: `mailto:${profile.email}` },
 ]
 
-export const loaderWords = ['Hello', 'ನಮಸ್ಕಾರ', 'नमस्ते', 'Bonjour', 'Hola', 'Ciao', 'Hello']
+export const loaderWords = ['Hello', 'வணக்கம்' ,'ನಮಸ್ಕಾರ', 'नमस्ते', 'Bonjour', 'Hola', 'Ciao', 'Hello']
 
 export type Project = {
   slug: string
