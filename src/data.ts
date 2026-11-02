@@ -15,7 +15,7 @@ export const profile = {
   tzLabel: 'IST',
 }
 
-export const resume = { href: '/resume.pdf', filename: 'Darshan_S_Resume.pdf' }
+export const resume = { href: '/darshanresume.pdf', filename: 'darshanresume.pdf' }
 
 export type SocialKey = 'linkedin' | 'instagram' | 'whatsapp' | 'github' | 'email'
 export const socialLinks: { key: SocialKey; label: string; href: string }[] = [
