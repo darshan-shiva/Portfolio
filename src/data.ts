@@ -51,7 +51,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: 'decipher',
-    title: 'DECIPHER',
+    title: 'Decipher',
     tagline: 'Meeting transcripts to decisions and commitments',
     category: 'Agentic AI · NLP',
     filters: ['AI / ML', 'Full-Stack'],
